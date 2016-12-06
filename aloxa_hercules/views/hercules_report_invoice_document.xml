@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<openerp>
+<data>
+
+	<template id="hercules_report_invoice_document" inherit_id="account.report_invoice_document">
+		<xpath expr="//table//tbody[@class='invoice_tbody']" position="before">
+			<div class="row mt32 mb32" style="margin-bottom:3em;">
+				<div class="col-xs-12" t-if="o.project_title">
+					<h2 t-esc="o.project_title" />
+				</div>
+				<div class="col-xs-12" t-if="o.project_desc">
+					<p t-esc="o.project_desc" />
+				</div>
+			</div>
+		</xpath>
+	</template> 
+	
+	<template id="hercules_report_sale_order_document" inherit_id="sale.report_saleorder_document">
+		<xpath expr="//table//tbody[@class='sale_tbody']" position="before">
+			<div class="row mt32 mb32" style="margin-bottom:3em;">
+				<div class="col-xs-12" t-if="o.project_title">
+					<h2 t-esc="o.project_title" />
+				</div>
+				<div class="col-xs-12" t-if="o.project_desc">
+					<p t-esc="o.project_desc" />
+				</div>
+			</div>
+		</xpath>
+	</template>
+
+</data>
+</openerp>

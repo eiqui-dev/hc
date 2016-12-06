@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+        <record id="view_hercules_config_settings" model="ir.ui.view">
+            <field name="name">Hercules Settings</field>
+            <field name="model">hercules.config.settings</field>
+            <field name="arch" type="xml">
+                <form string="Configure Hercules" class="oe_form_configuration">
+                    <header>
+                        <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" type="object" name="cancel" class="oe_link"/>
+                    </header>
+                    <div>
+                        <group string="Buoys Server Host">
+                        	<field name="server_host" />
+                    	</group>
+                   	</div>
+                </form>
+            </field>
+        </record>
+        
+    </data>
+</openerp>
